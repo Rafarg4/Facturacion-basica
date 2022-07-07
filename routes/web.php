@@ -31,3 +31,5 @@ Route::resource('clientes', App\Http\Controllers\ClienteController::class);
 Route::resource('proveedors', App\Http\Controllers\ProveedorController::class);
 
 Route::resource('marcas', App\Http\Controllers\MarcaController::class);
+
+Route::resource('productos', App\Http\Controllers\ProductoController::class);

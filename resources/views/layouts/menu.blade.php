@@ -1,6 +1,6 @@
 <li class="nav-item {{ Request::is('clientes*') ? 'active' : '' }}">
     <a class="nav-link" href="{{ route('clientes.index') }}">
-        <i class="nav-icon icon-cursor"></i>
+        <i class="nav-icon icon-user-follow"></i>
         <span>Clientes</span>
     </a>
 </li>
@@ -10,16 +10,22 @@
         <span>Categorias</span>
     </a>
 </li>
+<li class="nav-item {{ Request::is('marcas*') ? 'active' : '' }}">
+    <a class="nav-link" href="{{ route('marcas.index') }}">
+        <i class="nav-icon icon-cursor"></i>
+        <span>Marcas</span>
+    </a>
+</li>
 <li class="nav-item {{ Request::is('proveedors*') ? 'active' : '' }}">
     <a class="nav-link" href="{{ route('proveedors.index') }}">
         <i class="nav-icon icon-cursor"></i>
         <span>Proveedors</span>
     </a>
 </li>
-<li class="nav-item {{ Request::is('marcas*') ? 'active' : '' }}">
-    <a class="nav-link" href="{{ route('marcas.index') }}">
+<li class="nav-item {{ Request::is('productos*') ? 'active' : '' }}">
+    <a class="nav-link" href="{{ route('productos.index') }}">
         <i class="nav-icon icon-cursor"></i>
-        <span>Marcas</span>
+        <span>Productos</span>
     </a>
 </li>
 <li class="nav-item {{ Request::is('users*') ? 'active' : '' }}">
@@ -28,3 +34,4 @@
         <span>Usuarios</span>
     </a>
 </li>
+

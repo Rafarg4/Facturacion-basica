@@ -53,5 +53,7 @@ class Categoria extends Model
         'descripcion_categoria' => 'required'
     ];
 
-    
+      public function producto (){
+        return $this-> hasMany('App\Models\Producto');
+    }
 }

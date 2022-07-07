@@ -49,5 +49,7 @@ class Marca extends Model
         'nombre_marca' => 'required'
     ];
 
-    
+     public function producto (){
+        return $this-> hasMany('App\Models\Producto');
+    }
 }
