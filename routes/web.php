@@ -33,3 +33,11 @@ Route::resource('proveedors', App\Http\Controllers\ProveedorController::class);
 Route::resource('marcas', App\Http\Controllers\MarcaController::class);
 
 Route::resource('productos', App\Http\Controllers\ProductoController::class);
+
+Route::resource('descuentos', App\Http\Controllers\DescuentoController::class);
+
+Route::resource('compras', App\Http\Controllers\CompraController::class);
+
+Route::resource('pagoCompras', App\Http\Controllers\PagoCompraController::class);
+
+Route::resource('ventas', App\Http\Controllers\VentaController::class);

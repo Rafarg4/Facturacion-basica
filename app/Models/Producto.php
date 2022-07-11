@@ -109,4 +109,11 @@ class Producto extends Model
      return $this-> belongsTo('App\Models\Marca','id_marca');
 
     }
+     public function descuento (){
+        return $this-> hasMany('App\Models\Descuento');
+    }
+    public function compra (){
+     return $this-> belongsTo('App\Models\Compra');
+
+    }
 }

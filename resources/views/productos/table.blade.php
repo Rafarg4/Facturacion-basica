@@ -29,10 +29,10 @@
             <td>{{ $producto->marca->nombre_marca}}</td>
             <td>{{ $producto->stock }}</td>
             <td>{{ $producto->stock_min }}</td>
-            <td>{{ $producto->costo_producto }}</td>
+            <td>{{ number_format($producto->costo_producto) }}</td>
             <td>{{ $producto->unidad }}</td>
-            <td>{{ $producto->precio_anterior_venta }}</td>
-            <td>{{ $producto->precio_venta }}</td>
+            <td>{{ number_format($producto->precio_anterior_venta )}}</td>
+            <td>{{ number_format($producto->precio_venta )}}</td>
             <td>{{ $producto->iva_5 }}</td>
             <td>{{ $producto->iva_10 }}</td>
             <td>{{ $producto->estado }}</td>

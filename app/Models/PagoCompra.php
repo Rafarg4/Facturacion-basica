@@ -7,21 +7,20 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
- * Class Proveedor
+ * Class PagoCompra
  * @package App\Models
- * @version July 7, 2022, 2:13 am UTC
+ * @version July 8, 2022, 3:21 am UTC
  *
- * @property string $razon_social
- * @property string $direccion_proveedor
- * @property string $telefono_proveedor
+ * @property string $compras_id_compras
+ * @property string $monto
  */
-class Proveedor extends Model
+class PagoCompra extends Model
 {
     use SoftDeletes;
 
     use HasFactory;
 
-    public $table = 'proveedors';
+    public $table = 'pagos_compras';
     
 
     protected $dates = ['deleted_at'];
@@ -29,9 +28,8 @@ class Proveedor extends Model
 
 
     public $fillable = [
-        'razon_social',
-        'direccion_proveedor',
-        'telefono_proveedor'
+        'compras_id_compras',
+        'monto'
     ];
 
     /**
@@ -41,9 +39,8 @@ class Proveedor extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'razon_social' => 'string',
-        'direccion_proveedor' => 'string',
-        'telefono_proveedor' => 'string'
+        'compras_id_compras' => 'string',
+        'monto' => 'string'
     ];
 
     /**
@@ -52,12 +49,12 @@ class Proveedor extends Model
      * @var array
      */
     public static $rules = [
-        'razon_social' => 'required',
-        'direccion_proveedor' => 'required',
-        'telefono_proveedor' => 'required'
+        'compras_id_compras' => 'required',
+        'monto' => 'required'
     ];
 
      public function compra (){
-        return $this-> hasMany('App\Models\Compra');
+     return $this-> belongsTo('App\Models\Compra');
+
     }
 }
